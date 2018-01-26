@@ -1,0 +1,3 @@
+AddType application/octet-stream .fasta
+AddType application/octet-stream .fastq
+AddType application/octet-stream .txt
