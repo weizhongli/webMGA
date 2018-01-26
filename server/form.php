@@ -1,5 +1,5 @@
 <div id="serverform" class="serverform">
-<form id="server" name="server" action="/metagenomic-analysis/cgi-bin/NGS-web.cgi" method="post" enctype="multipart/form-data">
+<form id="server" name="server" action="/webMGA/cgi-bin/NGS-web.cgi" method="post" enctype="multipart/form-data">
 <input type="hidden" name="PROGRAM" value="<?php print($program) ?>" />
 <div>Sequence file to upload (required): <input type="file" name="SEQ_FILE" /></div> 
 <?php
@@ -38,7 +38,7 @@ if (isset($opt)) {
 </div> <!--End Severform"-->
 <div id="serverformexample" class="serverform">
 <span style="color:white;background-color:#FF3300;display:inline;padding:4px;font-weight:bold;font-size:1.0em;position:relative;left:-10px;top:-6px">EXAMPLE</span>
-<form id="serverexample" name="server" action="/metagenomic-analysis/cgi-bin/submit_web_example.cgi" method="post" enctype="multipart/form-data">
+<form id="serverexample" name="server" action="/webMGA/cgi-bin/submit_web_example.cgi" method="post" enctype="multipart/form-data">
 <input type="hidden" name="PROGRAM" value="<?php print($program) ?>" />
 <?php
 if ($program=='qc_filter_fastq' or $program=='trimm' or $program=='fastq2fasta') {$inputfile = 'input.fastq';}
