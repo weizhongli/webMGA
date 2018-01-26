@@ -183,7 +183,7 @@ From: liwz\@sdsc.edu
 Subject: WebMGA jot status
 
 Dear User, 
-  Your job of "$program" has started. The job id is $job_id. You can check job status from "/metagenomic-analysis/result/?jobid=$job_id".
+  Your job of "$program" has started. The job id is $job_id. You can check job status from "/webMGA/result/?jobid=$job_id".
   Thanks,
 EOD
     close(MAIL);
