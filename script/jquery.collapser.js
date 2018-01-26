@@ -1,0 +1,1 @@
+jquery.collapser/jquery.collapser.min.js
