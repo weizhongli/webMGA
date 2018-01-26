@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     //Set up AJAX job submission form
     var ajaxJobFormOptions = {
-        url: '/metagenomic-analysis/cgi-bin/NGS-web.cgi',
+        url: '/webMGA/cgi-bin/NGS-web.cgi',
         target: '#outputinner',
         beforeSubmit: function() {
             $("#output").hide().empty().append('<div id="outputinner"></div>').removeClass("output_err").addClass("output_succ");
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
     //Set up AJAX example job submission form
     var ajaxExampleJobFormOptions = {
-        url: '/metagenomic-analysis/cgi-bin/submit_web_example.cgi',
+        url: '/webMGA/cgi-bin/submit_web_example.cgi',
         target: '#outputinner',
         beforeSubmit: function() {
             $("#output").hide().empty().append('<div id="outputinner"></div>').removeClass("output_err").addClass("output_succ");
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
     //Set up AJAX mail submission form
     var ajaxMailFormOptions = {
-        url: '/metagenomic-analysis/contact/request.php',
+        url: '/webMGA/contact/request.php',
         target: '#outputinner',
         beforeSubmit: function() {
             $("#output").hide().empty().append('<div id="outputinner"></div>').removeClass("output_err").addClass("output_succ");
