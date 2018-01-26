@@ -1,0 +1,310 @@
+html {
+        overflow: scroll;
+}
+
+body {
+    font-family: sans-serif,aria;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+    background: #ABC url("../image/5577aaAABBCC500sinusoidal.png") top left repeat-x;
+}
+
+a {
+    text-decoration: none;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+    text-shadow: 3px 3px 4px #999;
+}
+
+#subtitle {
+    color:white;
+    font-size: 1.1em;
+}
+
+#topmenu {
+    width: 800px;
+    background: #444 url("../image/AAAAAA44444430sinusoidal.png") top left repeat-x;
+    padding-top: 5px;
+}
+
+#topmenu ul {
+    margin:0 auto;
+    padding:0;
+    display:table;
+    /*border: red solid 1px*/
+}
+
+#topmenu li {
+    display: table-cell;
+    list-style-type: none;
+    float: left;
+    padding: 5px 15px 5px 15px;
+}
+
+#topmenu a {display:block; font-size: 1.1em;}
+#topmenu a:link {color:white; text-decoration:none}
+#topmenu a:visited {color:white; text-decoration:none}
+#topmenu a:hover {color:yellow; text-decoration:none}
+
+.current {
+    background: #EEE;
+}
+
+.current a:link {color:black!important}
+.current a:visited {color:black!important}
+.current a:hover {color:black}
+
+#srvmenu {
+    margin:0;
+    padding:0;
+    width:150px;
+    float:left;
+}
+
+#srvmenu ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0 0 0 20px;
+}
+
+#srvmenu li {
+    background: #CCC;
+    padding: 0;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #777;
+}
+
+#srvmenu a {text-decoration:none; display:block; padding:3px;}
+#srvmenu a:link {color:black;}
+#srvmenu a:visited {color:black;}
+#srvmenu a:hover {color:white; background:#777;}
+
+#srvmain {
+    float:left;
+    width:590px;
+    min-height:750px;
+    background:white;
+    border: solid 3px #777;
+    margin: 0;
+    padding: 15px;
+}
+
+.programtitle {
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+
+.programdesc {
+    background:#FFC;
+    border: 1px solid #AAA;
+    padding:10px;
+    min-height: 60px;
+}
+.srvcurrent {
+    background: #777!important;
+}
+
+.srvcurrent a:link {color:white!important; font-weight:bold!important;}
+.srvcurrent a:visited {color:white!important}
+.srvcurrent a:hover {color:white!important}
+
+#serverform {
+    margin-top: 20px;
+}
+
+#serverform div {
+    margin: 5px 0 5px 0;
+}
+
+#output {
+    display: none;
+    padding: 8px;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.output_succ {
+    border: 2px solid green;
+    border-left: 8px solid green;
+}
+
+.output_err {
+    border: 2px solid #F33;
+    border-left: 8px solid red;
+}
+
+#main {
+    width: 800px;
+    background: #EEE;
+    margin-top: 0;
+    min-height: 500px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+#maininner {
+    position:relative;
+    margin: 0 40px 0 40px;
+}
+
+#news {
+    font-size: 0.8em;
+    width: 300px;
+    float: right;
+    /*background-color: #F0EBE2;*/
+    background: url("../image/F0EBE2FFFFFF500sinusoidal.png") top left repeat-x;
+    margin: 5px;
+    margin-right: 0px;
+    padding: 8px;
+    padding-top: 0;
+}
+
+.ndate {
+    color: #aa0000;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 120%;
+    margin-bottom: 2px;
+    font-family: serif;
+    color: #503;
+}
+
+input,textarea {
+    border: 1px solid #888;
+    background: #FFF;
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #666;
+}
+
+button#submitbutton {
+    margin-top:5px;
+    background-color: #ABD;
+    font-weight: bold;
+    vertical-align:middle;
+}
+
+#footer a:link {color: #028;} 
+#footer a:visited {color: #028;} 
+#footer a:hover {background-color: #CCC; text-decoration: none;}
+
+#blurb {
+    width: 560px;
+    float: left;
+    padding-left: 4px;
+}
+
+#header {
+    width: 800px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#footer {
+    color: #777; 
+    font-size:90%;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#ref {
+    border: solid 1px #EEE;
+    padding: 7px;
+    margin-top: 15px;
+    font-size: 90%;
+    color: #666;
+}
+
+#ref h5 {
+    margin:0 0 5px 2px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    border: none;
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nli {
+    font-family: serif;
+    font-weight: bold;
+    color: #028;
+}
+
+.ularrowed {
+    list-style-image: url('../image/arrow.png');
+}
+
+.clear {
+    clear: both;
+}
+
+.highlighted {
+    background-color: #ABD;
+}
+
+span.jobid {
+    font-weight: bold;
+    color: green;
+}
+
+span.status {
+    font-weight: bold;
+    color: red;
+}
+
+.shadow {
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.innershadow {
+    -moz-box-shadow:inset 0 0 10px #000000;
+    -webkit-box-shadow:inset 0 0 10px #000000;
+    box-shadow:inset 0 0 10px #000000;
+}
+
+.tooltip {
+    display:none;
+    background: #ABD;
+    font-size:12px;
+    max-width:240px;
+    padding:10px;
+    color:#000; 
+    border: 1px solid #555EBB;
+}
+
+#loader {
+    display:none;
+    color:red;
+    font-weight:bold;
+}
