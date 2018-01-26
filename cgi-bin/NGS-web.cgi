@@ -11,7 +11,6 @@
 
 use CGI;
 use DBI;
-use DBD::mysql;
 use Email::Valid;
 use POSIX;
 
@@ -57,14 +56,7 @@ if(!check_opt($cmd_opt9)                      ) {my_exit("Error! Parameter set 9
 if(!$program                                  ) {my_exit("Error! no program specified!");          }
 
 
-my $dbh = DBI->connect($NGS_mysql_connect_info, $NGS_mysql_userid, $NGS_mysql_passwd, { RaiseError => 1, AutoCommit => 0}) || 
-  my_exit("Unalbe to connect to $DataBaseHost because $DBI::errstr");
-
 $ip = $ENV{'REMOTE_ADDR'};
-$th = $dbh->prepare(qq{SELECT COUNT(ip_address) FROM log WHERE ip_address = '$ip' && (status = 'R' || status = 'W') });
-$th->execute();
-$cc = $th->fetchrow_array();
-my_exit_n_db("Error! Each IP (yours is $ip) can submit at most $MAXJOB jobs. Please wait until one of these jobs is finished!") if ($cc > $NGS_max_job_per_ip);
 
 #### mkdir and write uploaded files
 $job_id = random_ID(); $job_dir = "$NGS_working_dir/$job_id"; $cmd = `mkdir -p $job_dir`;
@@ -166,10 +158,6 @@ EOD
 
 $t1 = `date +20%y/%m/%d`; $t1 =~ s/\s//g;
 $t2 = `date +%H:%M:%S`;   $t2 =~ s/\s//g;
-$dbh->do("INSERT INTO log (ip_address, submission_date, submission_time, program_name, file_name, job_id,   status,cmd_opt,   cmd_opt2,   email,   from_web, random_dir, file_name2) 
-                   VALUES ('$ip',      '$t1',           '$t2',           '$program',   '$seqfile','$job_id','W',   '$cmd_opt','$cmd_opt2','$email','1',      '$job_id', '$seqfile2')");
-$dbh->disconnect();
-
 
 print <<EOD;
 Your job has been submitted. Your job id is $job_id. You can check <a href="$NGS_job_download_path/?jobid=$job_id">job status</a>.
@@ -222,7 +210,6 @@ sub my_exit {
 sub my_exit_n_db {
   my $message = shift;
   print $message, "\n";
-  $dbh->disconnect(); 
   exit 1;
 }
 ########## END my_exit_n_db;
