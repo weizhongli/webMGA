@@ -1,0 +1,48 @@
+# webMGA
+
+1. Installation
+===============
+
+Besides the scripts within this git repository, several additional packages need to installed
+or configured. 
+
+1.1 Install and configure NGS project annotation package
+The NGS-project is a set of public bioinformatics software tools, reference databases, scripts developed
+by our group at UCSD/JCVI for data analysis from metagenomics, RNA-seq, 16S projects. 
+
+All the files are included in folder, e.g. /home/some_path/NGS-ann-project, the directory structure
+look like:
+
+./NGS-ann-project/NGS-tools/some_scripts
+                 |
+                 -/bin/some_binary_files
+                 |
+                 -/apps/blast+
+                 |     /cd-hit
+                 |     /other_apps
+                 |     
+                 -/refs/db
+                 |     /db/Cog*
+                 |     /db/Kog*
+                 |     /db/Prk*
+                 |     /db/Pfam*
+                 |     /db/Tigrfam*
+                 |     /other_ref_dbs
+                 
+
+#### download pre-formatted COG/KOG/PRK databases from NCBI
+cd ./NGS-ann-project/refs/db
+wget ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Cog_LE.tar.gz
+wget ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Kog_LE.tar.gz
+wget ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Prk_LE.tar.gz
+
+#### unpack these databases
+tar xvf Cog_LE.tar.gz
+tar xvf Kog_LE.tar.gz
+tar xvf Prk_LE.tar.gz
+
+#### dump out the FASTA files, this need blastdbcmd, a program from blast+ package
+blastdbcmd -db Cog -outfmt %f -entry all > Cog.faa
+blastdbcmd -db Kog -outfmt %f -entry all > Kog.faa
+blastdbcmd -db Prk -outfmt %f -entry all > Prk.faa
+
