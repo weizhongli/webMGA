@@ -35,6 +35,10 @@ cd ./NGS-ann-project/refs/db
 wget ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Cog_LE.tar.gz
 wget ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Kog_LE.tar.gz
 wget ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Prk_LE.tar.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/pub/COG/COG/fun.txt; mv fun.txt Cog-class
+wget ftp://ftp.ncbi.nlm.nih.gov/pub/COG/COG/whog;    mv whog Cog-class-info
+wget ftp://ftp.ncbi.nlm.nih.gov/pub/COG/KOG/fun.txt; mv fun.txt Kog-class
+wget ftp://ftp.ncbi.nlm.nih.gov/pub/COG/KOG/kog;     mv kog Kog-class-info
 
 #### unpack these databases
 tar xvf Cog_LE.tar.gz
@@ -45,4 +49,9 @@ tar xvf Prk_LE.tar.gz
 blastdbcmd -db Cog -outfmt %f -entry all > Cog.faa
 blastdbcmd -db Kog -outfmt %f -entry all > Kog.faa
 blastdbcmd -db Prk -outfmt %f -entry all > Prk.faa
+
+#### download some additional files
+wget ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data/cognames2003-2014.tab
+wget ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data/fun2003-2014.tab
+wget ftp://ftp.ncbi.nih.gov/pub/COG/KOG/fun.txt
 
