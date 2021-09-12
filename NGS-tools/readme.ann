@@ -1,0 +1,15 @@
+Note about coverage, abundance in COG, KOG, PRK, PFAM annotation
+
+For cog.txt, kog.txt, prk.txt, and pfam.txt
+Coverage: the sum of total alignment length / length of reference protein for all non-overlapping top hits.
+Abundance: normalized coverage, which add up to 1.0
+
+For cog-class.txt, kog-class.txt, and prk-class.txt
+Coverage: fraction of protein families in the function class who got hit. 
+  So, the example below means that 85.6% of the 320 kog families in class J were found.
+Abundance: the sum of abundance of the kog families in this class. 
+  Since one kog family may below to multiple classes, the sum of abundance in this file can be greater than 1.0
+
+## example kog-class.txt
+#Class No_families Coverage Abundance Description
+J      320         0.85625  0.07011   Translation, ribosomal structure and biogenesis 
